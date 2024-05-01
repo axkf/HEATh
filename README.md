@@ -7,10 +7,10 @@ dependencies: bash 4.4.20(1) , GNU awk 4.2.1 , Gnuplot 5.2
 version:      2024-04-27
 
 
-  HEATh is a tool to calculate Gibbs free energies of solid phases from phonopy
-  thermal_properties files. It can be used to get values for specific temperatures 
-  and pressures or output formula strings, that can be utilized as input for 
-  other programs.
+  HEATh is a bash tool to calculate Gibbs free energies of solid phases from 
+  phonopy thermal_properties files. It can be used to get values for specific 
+  temperatures and pressures or output formula strings, that can be utilized as 
+  input for other programs.
 
 
 ------------------------------ GENERAL USAGE -----------------------------------
