@@ -24,7 +24,7 @@ cat <<- EOF
 
 author:       https://github.com/axkf
 dependencies: bash 4.4.20(1) , GNU awk 4.2.1 , Gnuplot 5.2
-version:      2024-04-30
+version:      2024-04-27
 
 
   HEATh is a tool to calculate Gibbs free energies of solid phases from phonopy
@@ -237,7 +237,7 @@ EXPORT:
     h  = 6.62607015E-34
     kB = 1.380649E-23
     R  = 8.31446261815324
-    F  = 96485
+    F  = 96485.64853321233100184
     u  = 1.6605390666050E-27
 
   These can also be used for corrections of the enthalpy, entropy or Gibbs free 
@@ -361,7 +361,7 @@ Export:
   h  = 6.62607015E-34
   kB = 1.380649E-23
   R  = 8.31446261815324
-  F  = 96485
+  F  = 96485.64853321233100184
   u  = 1.6605390666050E-27
 
 EOF
@@ -669,7 +669,7 @@ NA=6.02214076E+23 ;
 h=6.62607015E-34 ; 
 kB=1.380649E-23 ; 
 R=8.31446261815324 ; 
-F=96485 ; 
+F=96485.64853321233100184 ; 
 u=1.6605390666050E-27 ; 
 pi=3.141592653589793 ; 
 
@@ -1398,8 +1398,8 @@ do for [system in string_sys]{
 		
 		print sprintf("A_HTH_FML_Cp_total+=( \"%.15E + %.15E*(T-%.15E) + %.15E*(T**2-%.15E**2) + %.15E*(T**3-%.15E**3) - %.15E*((T**2+%.15E**2)/(T**2*%.15E**2))\" ) ; ",Cp0,a2,T0,a3,T0,a4,T0,a5,T0,T0) ; 
 
-		print sprintf("A_HTH_FML_H_total+=( \"(%.15E + (%.15E*T + 1/2.*%.15E*T**2 + 1/3.*%.15E*T**3 + 1/4.*%.15E*T**4 - %.15E/T + %.15E)/1000.)%s\" ) ; ",E,a1,a2,a3,a4,a5,a6,c_H) ;
-			print sprintf("A_HTH_FML_H_diff+=( \"(%.15E*T + 1/2.*%.15E*T**2 + 1/3.*%.15E*T**3 + 1/4.*%.15E*T**4 - %.15E/T + %.15E)/1000. - %.15E\" ) ; ",a1,a2,a3,a4,a5,a6,zpe) ;  
+		print sprintf("A_HTH_FML_H_total+=( \"(%.15E + (%.15E*T + 1/2.*%.15E*T**2 + 1/3.*%.15E*T**3 + 1/4.*%.15E*T**4 - %.15E/T + %.15E)/1000.)%s\" ) ; ",E,a1,a2,a3,a4,a5,a6,c_H) ; 
+			print sprintf("A_HTH_FML_H_diff+=( \"(%.15E*T + 1/2.*%.15E*T**2 + 1/3.*%.15E*T**3 + 1/4.*%.15E*T**4 - %.15E/T + %.15E)/1000. - %.15E\" ) ; ",a1,a2,a3,a4,a5,a6,zpe) ; 
 		
 		print sprintf("A_HTH_FML_S_total+=( \"(%.15E*log(T) + %.15E*T + 1/2.*%.15E*T**2 + 1/3.*%.15E*T**3 - %.15E/(2*T**2) + %.15E)%s\" ) ; ",a1,a2,a3,a4,a5,a7,c_S) ; 
 		
