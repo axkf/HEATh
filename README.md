@@ -213,12 +213,12 @@ EXPORT:
   which can be used for other calculations or plotting. Finally, some fundamental 
   constants are included as well:
 
-    NA = 6.02214076E+23
-    h  = 6.62607015E-34
-    kB = 1.380649E-23
-    R  = 8.31446261815324
-    F  = 96485
-    u  = 1.6605390666050E-27
+    NA = 6.02214076E+23 1/mol
+    h  = 6.62607015E-34 Js
+    kB = 1.380649E-23 J/K
+    R  = 8.31446261815324 J/mol/K
+    F  = 96485.64853321233100184 C/mol
+    u  = 1.6605390666050E-27 kg
 
   These can also be used for corrections of the enthalpy, entropy or Gibbs free 
   energy.
